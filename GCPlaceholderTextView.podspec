@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary  'A subclass of UITextView that allow a placeholder.'
   s.homepage 'https://github.com/gcamp/GCPlaceholderTextView'
   s.license  'MIT'
-  s.author   { 'Guillaume Campagna' => 'http://gcamp.ca' }
+  s.author   { 'Guillaume Campagna' }
   s.source   :git => 'https://github.com/shalex9154/GCPlaceholderTextView.git',
              :tag => '1.0.1'
   
