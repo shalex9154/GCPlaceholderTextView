@@ -1,6 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "GCPlaceholderTextView"
   s.version      = "1.0.2"
+  s.requires_arc = true
   s.summary      = "A subclass of UITextView that allow a placeholder."
   s.homepage     = "https://github.com/gcamp/GCPlaceholderTextView"
   s.license      = 'MIT'
