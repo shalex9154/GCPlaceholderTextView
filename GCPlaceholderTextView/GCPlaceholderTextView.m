@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) UIColor* realTextColor;
 @property (unsafe_unretained, nonatomic, readonly) NSString* realText;
+@property (nonatomic, assign) BOOL isPlaceholderVisible;
 
 - (void) beginEditing:(NSNotification*) notification;
 - (void) endEditing:(NSNotification*) notification;
@@ -48,6 +49,7 @@
 - (void) setPlaceholder:(NSString *)aPlaceholder {
     if ([self.realText isEqualToString:placeholder] && ![self isFirstResponder]) {
         self.text = aPlaceholder;
+        self.isPlaceholderVisible = YES;
     }
     if (aPlaceholder != placeholder) {
         placeholder = aPlaceholder;
@@ -67,7 +69,7 @@
 
 - (NSString *) text {
     NSString* text = [super text];
-    if ([text isEqualToString:self.placeholder]) return @"";
+    if ([text isEqualToString:self.placeholder] && self.isPlaceholderVisible) return @"";
     return text;
 }
 
@@ -95,6 +97,7 @@
     if ([self.realText isEqualToString:self.placeholder]) {
         super.text = nil;
         self.textColor = self.realTextColor;
+        self.isPlaceholderVisible = NO;
     }
 }
 
@@ -102,6 +105,7 @@
     if ([self.realText isEqualToString:@""] || self.realText == nil) {
         super.text = self.placeholder;
         self.textColor = self.placeholderColor;
+        self.isPlaceholderVisible = YES;
     }
 }
 
