@@ -4,8 +4,7 @@ Pod::Spec.new do |s|
   s.summary      = "A subclass of UITextView that allow a placeholder."
   s.homepage     = "https://github.com/gcamp/GCPlaceholderTextView"
   s.license      = 'MIT'
-  s.author       = { 'Guillaume Campagna' =&gt; 'http://gcamp.ca' }
-  s.source       = { :git =&gt; "https://github.com/gcamp/GCPlaceholderTextView.git", :tag =&gt; "1.0.1" }
+  s.source       = { :git = "https://github.com/shalex9154/GCPlaceholderTextView.git"}
   s.platform     = :ios
   s.source_files = 'GCPlaceholderTextView/GCPlaceholderTextView.{h,m}'
   s.framework  = 'UIKit'
